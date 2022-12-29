@@ -70,7 +70,17 @@ Therefore, if your expected return on each bet is negative, i.e. \(E_{1}<m_{0}\)
   =h^{\prime}\left(g\left(x\right)\right)g^{\prime}\left(x\right)
   =0
   .\]
-\(\log\) is a strictly monotonic continuous function, and so the critical points of \(L_{n}\) are also critical points of
+Furthermore, if \(x\) is a critical point of \(g\), then
+  \[
+  \left(h\circ g\right)^{\prime\prime}\left(x\right)
+  =\left[h^{\prime}\left(g\left(x\right)\right)g^{\prime}\left(x\right)\right]^{\prime}
+  \]
+  \[=h^{\prime}\left(g\left(x\right)\right)g^{\prime\prime}\left(x\right)+h^{\prime\prime}\left(g\left(x\right)\right)\left[g^{\prime}\left(x\right)\right]^{2}\]
+  \[=h^{\prime}\left(g\left(x\right)\right)g^{\prime\prime}\left(x\right).\]
+Thus \(g^{\prime\prime}\left(x\right)\) and \(\left(h\circ g\right)^{\prime\prime}\left(x\right)\) have the same sign if \(h^{\prime}\left(g\left(x\right)\right)>0\), which is true if \(h\) is increasing, but they have different signs if \(h^{\prime}\left(g\left(x\right)\right)<0\), which is true if \(h\) is decreasing.
+</p>
+<p>
+Returning to \(L_{n}\), note that \(\log\) is a strictly monotonic continuous function, and so the critical points of \(L_{n}\) are also critical points of
   \[\log\left(L_{n}\right)=\log\left(m_{0}\left(1+fw\right)^{pn}\left(1-fl\right)^{qn}\right)\]
   \[=\log\left(m_{0}\right)+pn\log\left(1+fw\right)+qn\log\left(1-fl\right).\]
 Thus any critical point \(f\) of \(L_{n}\) will satisfy
@@ -80,7 +90,11 @@ Thus any critical point \(f\) of \(L_{n}\) will satisfy
   \[qlfw+pwfl=pw-ql,\]
 and since \(q+p=1\),
   \[f=\frac{pw-ql}{qlw+pwl}=\frac{pw-ql}{\left(q+p\right)wl}=\frac{pw-ql}{lw}=\frac{p}{l}-\frac{q}{w}.\]
-We also need to check that this is indeed a global maximum.
+We also need to check that \(f\) is indeed a global maximum. Since \(\log\) is increasing, we know from earlier that \(L_{n}^{\prime\prime}\) has the same sign as \(\left[\log\left(L_{n}\right)\right]^{\prime\prime}\). We compute
+  \[
+  left[\log\left(L_{n}\right)\right]^{\prime\prime}
+  =\frac{d}{dl}\left(pnw\left(1+fw\right)^{-1}-qnl\left(1-fl\right)^{-1}\right)
+  \]
 </p>
 </body>
 </html>
