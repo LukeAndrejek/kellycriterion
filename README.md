@@ -17,9 +17,13 @@
 </p>
 <p>
   Let's first determine your expected outcome. If you win, then you keep your initial \(m_{0}\) and get an additional \(wm_{0}\). If you lose, then you start with your initial \(m_{0}\) but lose \(lm_{0}\). Thus the expected outcome of the first bet is
-  \[E_{1}=\left(m_{0}+wm_{0}\right)p + \left(m_{0}-m_{0}l\right)q.\]
+  \[
+  E_{1}=\left(m_{0}+wm_{0}\right)p + \left(m_{0}-m_{0}l\right)q
+  .\]
 You should only take the bet if you expect to gain more than you started with. That is,
-  \[\left(m_{0}+wm_{0}\right)p + \left(m_{0}-lm_{0}\right)q > m_{0}.\]
+  \[
+  \left(m_{0}+wm_{0}\right)p + \left(m_{0}-lm_{0}\right)q > m_{0}
+  .\]
 We can simplify and use \(q=1-p\) to obtain
   \[\left(1+w\right)p + \left(1-l\right)q > 1,\]
   \[p+wp+q-lq>1,\]
@@ -29,25 +33,29 @@ So as long as \(wp>lq\), you should bet. The question is how much to bet.
 </p>
 <p>
   For simplicity, let's assume that each time you make a bet, you wager some fraction \(f\) of your remaining funds. Then each time you win, you multiply your funds by a factor of \(1+fw\), and each time you lose, you multiply your funds by a factor of \(1-fl\). Therefore, your bankroll after \(n\) bets is
-  \[m_{n}=m_{0}\left(1+fw\right)^{k}\left(1-fl\right)^{n-k}\]
+  \[
+  m_{n}=m_{0}\left(1+fw\right)^{k}\left(1-fl\right)^{n-k}
+  \]
 where \(k\) is the number of wins and thus \(n-k\) is the number of losses. Each outcome involving \(k\) wins occurs with probability \(p^{k}q^{n-k}\), and there are \(C\left(n,k\right)\) ways of ordering the \(k\) wins and \(n-k\) losses among the \(n\) bets, where
-  \[C\left(n,k\right)=\frac{n!}{k!\left(n-k\right)!\right)}.\]
+  \[
+  C\left(n,k\right)=\frac{n!}{k!\left(n-k\right)!}
+  .
+  \]
 Thus the probability of observing \(k\) wins, which we will define as \(p_{n}\), is \(C\left(n,k\right)p^{k}q^{n-k}\). (Note that these probabilities follow a binomial distribution.)
 </p>
 <p>
-  One strategy to maximize your wealth would be to maximize the expected value of \(m_{n}\). We can use the binomial theorem to compute
+  Since you can control \(f\), you want to choose a value of \(f\) which maximizes your wealth. One strategy would be to maximize the expected value of \(m_{n}\). We can use the binomial theorem to compute
+  \[E_{n}=\sum_{k=0}^{n}m_{n}p_{n}\]
+  \[=\sum_{k=0}^{n}m_{0}\left(1+fw\right)^{k}\left(1-fl\right)^{n-k}C\left(n,k\right)p^{k}q^{n-k}\]
+  \[=\sum_{k=0}^{n}m_{0}\left[\left(1+fw\right)p\right]^{k}\left[\left(1-fl\right)q\right]^{n-k}\]
+  \[=\left[\left(1+fw\right)p+\left(1-fl\right)q\right]^{n}.\]
+Thus you should choose \(f\) which maximizes
   \[
-  E_{n}
-  =
-  \sum_{k=0}^{n}m_{n}p_{n}
-  =
-  \sum_{k=0}^{n}m_{0}\left(1+fw\right)^{k}\left(1-fl\right)^{n-k}C\left(n,k\right)p^{k}q^{n-k}
-  =
-  \sum_{k=0}^{n}m_{0}\left[\left(1+fw\right)p\right]^{k}\left[\left(1-fl\right)q\right]^{n-k}
-  =
-  \left[\left(1+fw\right)p+\left(1-fl\right)q\right]^{n}
-  .
-  \]
+  \left(1+fw\right)p+\left(1-fl\right)q\right
+  =p+fwp+q-flq
+  =f\left(wp-lq\right)+1
+  .\]
+Therefore, if your expected return on each bet is negative, i.e. \(E_{1}<m_{0}\), i.e. \(wp<lq\), i.e. \(wp-lq<0\), then the coefficient of \(f\) above is negative, and so you should choose the smallest possible value of \(f\), which is \(f=0\). That is, you should not take the bet. This is consistent with our previous findings. However, if your expected return on each bet is positive, i.e. \(E_{1}>m_{0}\), i.e. \(wp-lq>0\), then you should choose the largest possible value of \(f\), which is \(f=1\). That is, you should always wager your entire bankroll.
 </p>
 </body>
 </html>
