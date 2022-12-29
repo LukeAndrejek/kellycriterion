@@ -28,9 +28,26 @@ We can simplify and use \(q=1-p\) to obtain
 So as long as \(wp>lq\), you should bet. The question is how much to bet.
 </p>
 <p>
-  For simplicity, let's assume that each time you make a bet, you wager some fraction \(f\) of your remaining funds. Then each time you win, you multiply your funds by a factor of \(1+fw\), and each time you lose, you multiply your funds by a factor of \(1-fl\). Therefore, your bankroll after \(n\) bets is \(m_{0}\left(1+fw\right)^{n_{w}}\left(1-fl\right)^{n_{l}}\) where \(n_{w}\) is the number of wins and \(n_{l}\) is the number of losses. Each outcome involving \(n_{w}\) wins and \(n_{l}\) losses occurs with probability \(p^{n_{w}}q^{n_{l}}\), and there are \(C\left(n,n_{w}\right)\) ways of ordering the (n_{w}\) wins and \(n_{l}\) losses, where
-  \[C\left(n,k\right)={n! \over k!\left(n-k\right!\right)}.\]
-Thus the probability of observing \(n_{w}\) wins and \(n_{l}\) losses is \(C\left(n,n_{w}\right)p^{n_{w}}q^{n_{l}}\).
+  For simplicity, let's assume that each time you make a bet, you wager some fraction \(f\) of your remaining funds. Then each time you win, you multiply your funds by a factor of \(1+fw\), and each time you lose, you multiply your funds by a factor of \(1-fl\). Therefore, your bankroll after \(n\) bets is
+  \[m_{n}=m_{0}\left(1+fw\right)^{k}\left(1-fl\right)^{n-k}\]
+where \(k\) is the number of wins and thus \(n-k\) is the number of losses. Each outcome involving \(k\) wins occurs with probability \(p^{k}q^{n-k}\), and there are \(C\left(n,k\right)\) ways of ordering the \(k\) wins and \(n-k\) losses among the \(n\) bets, where
+  \[C\left(n,k\right)=\frac{n!}{k!\left(n-k\right)!\right)}.\]
+Thus the probability of observing \(k\) wins, which we will define as \(p_{n}\), is \(C\left(n,k\right)p^{k}q^{n-k}\). (Note that these probabilities follow a binomial distribution.)
+</p>
+<p>
+  One strategy to maximize your wealth would be to maximize the expected value of \(m_{n}\). We can use the binomial theorem to compute
+  \[
+  E_{n}
+  =
+  \sum_{k=0}^{n}m_{n}p_{n}
+  =
+  \sum_{k=0}^{n}m_{0}\left(1+fw\right)^{k}\left(1-fl\right)^{n-k}C\left(n,k\right)p^{k}q^{n-k}
+  =
+  \sum_{k=0}^{n}m_{0}\left[\left(1+fw\right)p\right]^{k}\left[\left(1-fl\right)q\right]^{n-k}
+  =
+  \left[\left(1+fw\right)p+\left(1-fl\right)q\right]^{n}
+  .
+  \]
 </p>
 </body>
 </html>
