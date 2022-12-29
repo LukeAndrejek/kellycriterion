@@ -73,6 +73,14 @@ Therefore, if your expected return on each bet is negative, i.e. \(E_{1}<m_{0}\)
 \(\log\) is a strictly monotonic continuous function, and so the critical points of \(L_{n}\) are also critical points of
   \[\log\left(L_{n}\right)=\log\left(m_{0}\left(1+fw\right)^{pn}\left(1-fl\right)^{qn}\right)\]
   \[=\log\left(m_{0}\right)+pn\log\left(1+fw\right)+qn\log\left(1-fl\right).\]
+Thus any critical point \(f\) of \(L_{n}\) will satisfy
+  \[0=\frac{d}{dl}\log\left(L_{n}\right)=\frac{pnw}{1+fw}-\frac{qnl}{1-fl},\]
+  \[\frac{pw}{1+fw}=\frac{ql}{1-fl},\]
+  \[pw-pwfl=ql+qlfw,\]
+  \[qlfw+pwfl=pw-ql,\]
+and since \(q+p=1\),
+  \[f=\frac{pw-ql}{qlw+pwl}=\frac{pw-ql}{\left(q+p\right)wl=\frac{pw-ql}{lw}=\frac{p}{l}-\frac{q}{w}.\]
+We also need to check that this is indeed a global maximum.
 </p>
 </body>
 </html>
