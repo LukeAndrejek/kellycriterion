@@ -67,7 +67,7 @@ Therefore, if your expected return on each bet is negative, i.e. \(E_{1}<m_{0}\)
   We now need to maximize \(L_{n}\). This is a difficult formula to work with. Let's derive a helpful trick. Suppose we are trying to find the critical points of a function \(g\). Let \(h\) be is a strictly monotonic continuous function. Then \(h^{\prime}\) is never zero. Therefore, \(g^{\prime}\left(x\right)=0\) iff
   \[
   \left(h\circ g\right)^{\prime}\left(x\right)
-  =h^{\prime}\left(g\left(x\right)\right)g\left(x\right)
+  =h^{\prime}\left(g\left(x\right)\right)g^{\prime}\left(x\right)
   =0
   .\]
 \(\log\) is a strictly monotonic continuous function, and so the critical points of \(L_{n}\) are also critical points of
@@ -79,7 +79,7 @@ Thus any critical point \(f\) of \(L_{n}\) will satisfy
   \[pw-pwfl=ql+qlfw,\]
   \[qlfw+pwfl=pw-ql,\]
 and since \(q+p=1\),
-  \[f=\frac{pw-ql}{qlw+pwl}=\frac{pw-ql}{\left(q+p\right)wl=\frac{pw-ql}{lw}=\frac{p}{l}-\frac{q}{w}.\]
+  \[f=\frac{pw-ql}{qlw+pwl}=\frac{pw-ql}{\left(q+p\right)wl}=\frac{pw-ql}{lw}=\frac{p}{l}-\frac{q}{w}.\]
 We also need to check that this is indeed a global maximum.
 </p>
 </body>
