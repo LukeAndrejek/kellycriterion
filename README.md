@@ -17,12 +17,12 @@
 </p>
 <p>
   Let's first determine your expected outcome. If you win, then you keep your initial \(m_{0}\) and get an additional \(wm_{0}\). If you lose, then you start with your initial \(m_{0}\) but lose \(lm_{0}\). Thus the expected outcome of the first bet is \(E_{1}=\left(m_{0}+wm_{0}\right)p + \left(m_{0}-m_{0}l\right)q\). You should only take the bet if you expect to gain more than you started with. That is,
-  \[\left(m_{0}+wm_{0}\right)p + \left(m_{0}-lm_{0}\right)q > m_{0}\].
+  \[\left(m_{0}+wm_{0}\right)p + \left(m_{0}-lm_{0}\right)q > m_{0}.\]
 We can simplify and use \(q=1-p\) to obtain
-  \[\left(1+w\right)p + \left(1-l\right)q > 1\],
-  \[p+wp+q-lq>1\],
-  \[1+wp-lq>1\],
-  \[wp>lq\].
+  \[\left(1+w\right)p + \left(1-l\right)q > 1,\]
+  \[p+wp+q-lq>1,\]
+  \[1+wp-lq>1,\]
+  \[wp>lq.\]
 So as long as \(wp>lq\), you should bet. The question is how much to bet.
 </p>
 <p>
