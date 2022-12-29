@@ -41,7 +41,7 @@ where \(k\) is the number of wins and thus \(n-k\) is the number of losses. Each
   C\left(n,k\right)=\frac{n!}{k!\left(n-k\right)!}
   .
   \]
-Thus the probability of observing \(k\) wins, which we will define as \(p_{n}\), is \(C\left(n,k\right)p^{k}q^{n-k}\). (Note that these probabilities follow a binomial distribution.)
+Thus the probability of observing \(k\) wins, which we will define as \(p_{n}\left(k\right)\), is \(C\left(n,k\right)p^{k}q^{n-k}\). (Note that these probabilities follow a binomial distribution.)
 </p>
 <p>
   Since you can control \(f\), you want to choose a value of \(f\) which maximizes your wealth. One strategy would be to maximize the expected value of \(m_{n}\). We can use the binomial theorem to compute
@@ -51,7 +51,7 @@ Thus the probability of observing \(k\) wins, which we will define as \(p_{n}\),
   \[=\left[\left(1+fw\right)p+\left(1-fl\right)q\right]^{n}.\]
 Thus you should choose \(f\) which maximizes
   \[
-  \left(1+fw\right)p+\left(1-fl\right)q\right)
+  \left(1+fw\right)p+\left(1-fl\right)q
   =p+fwp+q-flq
   =f\left(wp-lq\right)+1
   .\]
@@ -61,7 +61,7 @@ Therefore, if your expected return on each bet is negative, i.e. \(E_{1}<m_{0}\)
   Great, so have we answered the question? Well, let's think about how this strategy plays out. Suppose \(wp>lq\), and so you choose \(f=1\), and suppose \(l=1\), meaning that when you lose, you lose the entire amount wagered. Then your bankroll after \(n\) bets is \(m_{n}=m_{0}\left(1+w\right)^{k}0^{n-k}\). This means that if you lose any bet, i.e. if \(k<n\), then \(m_{n}=0\), which means that you are broke. Since the probability of losing at least one of \(n\) bets is \(1-p^{n}\), which converges to \(1\) as \(n\to\infty\), you will go broke at some point with probability \(1\). So choosing \(l=1\) simultaneously maximizes your expected bankroll and guarantees that your bankroll will eventually diverge from this expected bankroll.
 </p>
 <p>
-  The problem with this strategy is that, counterintuitively, maximizing your expected bankroll does not maximize the bankroll that you are likely to observe. So let's instead try to maximize the most likely outcome. Since the probability of winning each bet is \(p\), then after \(n\) bets, you should expect the number of wins to be an integer \(k_{n}\) such that \(k_{n}/n\) is approximately \(p\). Furthermore, \(k_{n}/n\to p\) as \(n\to\infty\), and so the most likely bankroll after \(n\) bets converges to \(L_{n}=m_{0}\left(1+fw\right)^{pn}\left(1-fl\right)^{qn}\). In fact, since
+  The problem with this strategy is that, counterintuitively, maximizing your expected bankroll does not maximize the bankroll that you are likely to observe. So let's instead try to maximize the most likely outcome. Since the probability of winning each bet is \(p\), then after \(n\) bets, you should expect the number of wins to be an integer \(k_{n}\) such that \(k_{n}/n\) is approximately \(p\). Furthermore, \(k_{n}/n\to p\) as \(n\to\infty\), and so the most likely bankroll after \(n\) bets converges to \(L_{n}=m_{0}\left(1+fw\right)^{pn}\left(1-fl\right)^{qn}\). In fact, since the probabilities \(p_{n}\left(k\right)\) follow a binomial distribution, one can show that \(p_{n}\) is maximized for any integers \(k\in\left[\left(n+1\right)p-1,\left(n+1\right)p\right]\).
 </p>
 </body>
 </html>
