@@ -95,6 +95,8 @@ We also need to check that \(f\) is indeed a global maximum. Since \(\log\) is i
   left[\log\left(L_{n}\right)\right]^{\prime\prime}
   =\frac{d}{dl}\left(pnw\left(1+fw\right)^{-1}-qnl\left(1-fl\right)^{-1}\right)
   \]
+  \[=-\left(\frac{pnw^{2}}{\left(1+fw\right)^{2}}+\frac{qnl^{2}}{\left(1-fl\right)^{2}}\right),\]
+and since both fractions above are positive, the entire formula is negative.
 </p>
 </body>
 </html>
