@@ -10,7 +10,7 @@
 </head>
 <body>
   <p>
-    When I first heard about the Kelly criterion, my impression was that it provided a mathematically optimal way to determine what percentage of your available funds to wager on a bet depending on the distribution of outcomes of the wager. When reading summaries of the Kelly criterion, I tend to see statements like the following quote from Wikipedia: "The Kelly bet size is found by maximizing the expected value of the logarithm of wealth, which is equivalent to maximizing the expected geometric growth rate." After deriving the Kelly criterion myself, descriptions like this seem misleading. Let's derive the Kelly Criterion to assess this description.
+    When I first heard about the Kelly criterion, my impression was that it provided a mathematically optimal way to determine what percentage of your available funds to wager on a bet depending on the distribution of outcomes of the wager. When reading summaries of the Kelly criterion, I tend to see statements like the following quote from Wikipedia: "The Kelly bet size is found by maximizing the expected value of the logarithm of wealth, which is equivalent to maximizing the expected geometric growth rate." After deriving the Kelly criterion myself, descriptions like this don't emphsize its key insight. Let's derive the Kelly Criterion to assess these descriptions.
   </p>
   <p>
     Suppose your friend offers to make a bet with you. You can wager any amount of money. If you win, your friend will pay you the amount you wagered times \(w\), but if you lose, you have to pay your friend the amount you wagered times \(l\). You know that your probability of winning is \(p\), and your probability of losing is \(q=1-p\). Your friend will make this bet with you as many times as you want. Suppose you have a certain amount of money, \(m_{0}\), that you can wager. What should you do?
@@ -99,7 +99,13 @@
   and since both fractions above are positive, the entire formula is negative. So \(L_{n}\) is concave down everywhere. Thus \(f^{*}\) is indeed a global maximum of \(L_{n}\), which establishes that selecting \(f=f^{*}\) indeed maximizes the most likely outcome. This choice of \(f\) is referred to as the Kelly criterion.
   </p>
   <p>
-    The key feature of the Kelly criterion is that it maximizies the most likely outcome rather than the expected outcome. I am puzzled that this is not clearly stated in many summaries of the Kelly criterion. Furthermore, common descriptions of the Kelly criterion can be misleading. When Wikipedia says that the goal is to maximize "the expected value of the logarithm of wealth," it sounds as though the key insight of the Kelly criterion lies in applying the logarithm. Instead, the key insight lies in how you measure wealth. Since logarithms do not alter critical points,
+    The key feature of the Kelly criterion is that it maximizies the most likely outcome rather than the expected outcome. I am puzzled that this is not clearly stated in many summaries of the Kelly criterion. When Wikipedia says that the goal is to maximize "the expected value of the logarithm of wealth," it sounds as though the key key word is "logarith," when in fact the key word is "wealth." As seen in our derivation, applying the logarithm was simply a calculus trick. The key insight lies in how you measure wealth. The Kelly criterion asserts that one should measure the most likely value of wealth rather than the expected value of wealth.
+  </p>
+  <p>
+    Another one of my misconceptions was that the Kelly criterion provided a mathematically optimal betting strategy. However, for a bet in which you expect a profit, choosing \(f=1\) and \(f=f^{*}\) are both mathematically valid strategies. The only difference is the measure of wealth that you are trying to maximize. One argument for the superiority of the Kelly criterion is Theroem 1(v) as stated in Thorpe (2006) and proven in Breiman (1961), which states that maximizing \(E\log\left(X_{n}\right)\) asymptotically minimizes the expected time required for the current capital \(X_{n}\) to surpass a goal \(C\). However, the term \(X_{n}\) in this context refers to the most likely value of wealth after \(n\) bets, and so this theorem assumes that one is trying to maximize the expected value of wealth. Perhaps one could design additional measures of wealth, such as combinations of expected value and standard deviation of wealth, and these measures of wealth could be maximized by entirely different strategies.
+  </p>
+  <p>
+    Ultimately, there is no one-size-fits-all mathematically optimal betting strategy. There are only conditionally optimal strategies. And these conditions depend on the choice of measure of wealth.
   </p>
 </body>
 </html>
