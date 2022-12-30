@@ -83,20 +83,20 @@ Thus \(g^{\prime\prime}\left(x\right)\) and \(\left(h\circ g\right)^{\prime\prim
 Returning to \(L_{n}\), note that \(\log\) is a strictly monotonic continuous function, and so the critical points of \(L_{n}\) are also critical points of
   \[\log\left(L_{n}\right)=\log\left(m_{0}\left(1+fw\right)^{pn}\left(1-fl\right)^{qn}\right)\]
   \[=\log\left(m_{0}\right)+pn\log\left(1+fw\right)+qn\log\left(1-fl\right).\]
-Thus any critical point \(f\) of \(L_{n}\) will satisfy
-  \[0=\frac{d}{dl}\log\left(L_{n}\right)=\frac{pnw}{1+fw}-\frac{qnl}{1-fl},\]
-  \[\frac{pw}{1+fw}=\frac{ql}{1-fl},\]
-  \[pw-pwfl=ql+qlfw,\]
-  \[qlfw+pwfl=pw-ql,\]
+Thus any critical point \(f^{*}\) of \(L_{n}\) will satisfy
+  \[0=\frac{d}{df}\log\left(L_{n}\right)\big|_{f^{*}}=\frac{pnw}{1+f^{*}w}-\frac{qnl}{1-f^{*}l},\]
+  \[\frac{pw}{1+f^{*}w}=\frac{ql}{1-f^{*}l},\]
+  \[pw-pwf^{*}l=ql+qlf^{*}w,\]
+  \[qlf^{*}w+pwf^{*}l=pw-ql,\]
 and since \(q+p=1\),
-  \[f=\frac{pw-ql}{qlw+pwl}=\frac{pw-ql}{\left(q+p\right)wl}=\frac{pw-ql}{lw}=\frac{p}{l}-\frac{q}{w}.\]
-We also need to check that \(f\) is indeed a global maximum. Since \(\log\) is increasing, we know from earlier that \(L_{n}^{\prime\prime}\) has the same sign as \(\left[\log\left(L_{n}\right)\right]^{\prime\prime}\). We compute
+  \[f^{*}=\frac{pw-ql}{qlw+pwl}=\frac{pw-ql}{\left(q+p\right)wl}=\frac{pw-ql}{lw}=\frac{p}{l}-\frac{q}{w}.\]
+We also need to check that \(f^{*}\) is indeed a global maximum. Since \(\log\) is increasing, we know from earlier that \(L_{n}^{\prime\prime}\) has the same sign as \(\left[\log\left(L_{n}\right)\right]^{\prime\prime}\). We compute
   \[
-  left[\log\left(L_{n}\right)\right]^{\prime\prime}
+  \left[\log\left(L_{n}\right)\right]^{\prime\prime}
   =\frac{d}{dl}\left(pnw\left(1+fw\right)^{-1}-qnl\left(1-fl\right)^{-1}\right)
   \]
   \[=-\left(\frac{pnw^{2}}{\left(1+fw\right)^{2}}+\frac{qnl^{2}}{\left(1-fl\right)^{2}}\right),\]
-and since both fractions above are positive, the entire formula is negative.
+and since both fractions above are positive, the entire formula is negative. So \(L_{n}\) is concave down everywhere. Thus \(f^{*}\) is indeed a global maximum of \(L_{n}\), which establishes that selecting \(f=f^{*}\) indeed maximizes the most likely outcome.
 </p>
 </body>
 </html>
