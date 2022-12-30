@@ -50,8 +50,8 @@
     Since you can control \(f\), you want to choose a value of \(f\) which maximizes your wealth. One strategy would be to maximize the expected value of \(m_{n}\). We can use the binomial theorem to compute
     \[E_{n}=\sum_{k=0}^{n}m_{n}p_{n}\]
     \[=\sum_{k=0}^{n}m_{0}\left(1+fw\right)^{k}\left(1-fl\right)^{n-k}C\left(n,k\right)p^{k}q^{n-k}\]
-    \[=\sum_{k=0}^{n}m_{0}\left[\left(1+fw\right)p\right]^{k}\left[\left(1-fl\right)q\right]^{n-k}\]
-    \[=\left[\left(1+fw\right)p+\left(1-fl\right)q\right]^{n}.\]
+    \[=m_{0}\sum_{k=0}^{n}C\left(n,k\right)\left[\left(1+fw\right)p\right]^{k}\left[\left(1-fl\right)q\right]^{n-k}\]
+    \[=m_{0}\left[\left(1+fw\right)p+\left(1-fl\right)q\right]^{n}.\]
   Thus you should choose \(f\) which maximizes
     \[
     \left(1+fw\right)p+\left(1-fl\right)q
