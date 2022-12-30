@@ -7,9 +7,11 @@
   <script id="MathJax-script" async
           src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
-  The Kelly Criterion is Overrated
 </head>
 <body>
+  <h1>
+    The Kelly Criterion is Overrated
+  </h1>
   <p>
     When I first heard about the Kelly criterion, my impression was that it provided a mathematically optimal way to determine what percentage of your available funds to wager on a bet depending on the distribution of outcomes of the bet. When reading summaries of the Kelly criterion, I tend to see statements like the following quote from Wikipedia: "The Kelly bet size is found by maximizing the expected value of the logarithm of wealth, which is equivalent to maximizing the expected geometric growth rate." After deriving the Kelly criterion myself, descriptions like this don't emphasize its insights and shortcomings. Let's derive the Kelly Criterion to assess these descriptions.
   </p>
