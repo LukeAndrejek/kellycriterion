@@ -110,5 +110,8 @@
   <p>
     Ultimately, there is no one-size-fits-all mathematically optimal betting strategy. There are only conditionally optimal strategies. And these conditions are given by the choice of measure of wealth.
   </p>
+  <p>
+  UPDATE: I think there might be more support for the Kelly criterion in Breiman's 1961 paper than I initially assumed, but I will need to read the paper carefully before coming to a conclusion. For now, I would take this post with a grain of salt.
+  </p>
 </body>
 </html>
